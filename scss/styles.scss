@@ -1,0 +1,82 @@
+// Compile run: sass -s compressed scss/styles.scss css/styles.css
+// Colores e Importaciones
+
+@import 'mixins';
+
+$blue-sky: #2699FB;
+$bg: #F1F9FF;
+
+body {
+	background-color: $bg;
+	min-height: 100vh;
+}
+
+nav {
+	height: 100px;
+
+	.brand-logo {
+		margin-left: 30px;
+		font-family: 'Dosis', sans-serif;
+		letter-spacing: 0.2em;
+	}
+
+	ul {
+		margin-right: 50px;
+
+		li {
+			margin-right: 30px;
+		}
+
+		button {
+			font-family: 'Arial', sans-serif;
+			border: 2.5px solid $blue-sky;
+			border-radius: 10px;
+			width: 150px;
+			height: 45px;
+			color: $blue-sky;
+			background: white;
+			cursor: pointer;
+			
+			&:hover {
+				background: aliceblue;
+			}
+		}
+	}
+}
+
+#container {
+	overflow: hidden;
+	position: absolute;
+	width: 97%;
+	height: 86%;
+	margin-top: -25px;
+	margin-left: 1.5%;
+
+    display: inline-block;
+    text-align: center;
+
+    #play-bg { display: block; }
+
+    #play-bg2 { @include play; }
+
+    #play-bg3 { @include play; }
+
+	.centered { @include centered($blue-sky, 80px, 50%); }
+
+	.downed {
+		position: absolute;
+		bottom: 25px;
+		left: 25px;
+
+		.fa-facebook-f, .fa-twitter, .fa-instagram, .fa-youtube {
+			font-size: 25px;
+			margin-right: 25px;
+			cursor: pointer;
+		}
+
+		.fa-facebook-f { color: #3b5998; &:hover { color: #4a71c3; } }
+		.fa-twitter { color: #00acee; &:hover { color: #01b9ff; } }
+		.fa-instagram { color: #204BFF; &:hover { color: #5d7cff; } }
+		.fa-youtube { color: #CD201F; &:hover { color: #ff2927; } }
+	}
+}

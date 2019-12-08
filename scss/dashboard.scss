@@ -1,0 +1,131 @@
+// Compile run: sass -s compressed scss/dashboard.scss css/dashboard.css
+// Colores e Importaciones
+
+@import 'mixins';
+
+$blue-sky: #2699FB;
+
+body {
+	min-height: 100vh;
+	min-width: 100vh;
+}
+
+nav { @include nav(); }
+
+.news {
+	padding: 10px 0px;
+	height: 500px;
+
+	.news-carousel {
+		height: 80%;
+
+		// Modificaciones en la Librería Slick para personalizar los Arrows
+		.slick-prev, .slick-next {
+			font-size: 30px;
+			width: 60px !important;
+			height: 70px !important;
+		}
+
+		.slick-prev {
+			left: -85px !important;
+			background-size: cover;
+			background-image: url('../res/back.png');
+		}
+
+		.slick-next {
+			right: -80px !important;
+			background-size: cover;
+			background-image: url('../res/next.png');
+		}
+
+		.slick-prev:before {
+			content: none;
+		}
+
+		.slick-next:before {
+			content: none;
+		}
+
+		.image {
+			height: 400px;
+			margin-right: 10px;
+			border-radius: 7px;
+			cursor: pointer;
+			// Efectos
+			transition: 1s ease;
+			-moz-transition: 1s ease;
+			-webkit-transition: 1s ease;
+			-o-transition: 1s ease;
+
+			transform: scale(0.9);
+			-moz-transform: scale(0.9);
+			-webkit-transform: scale(0.9);
+			-o-transform: scale(0.9);
+			-ms-transform: scale(0.9);
+
+			&:hover {
+				display: block;
+				filter: blur(1.5px);
+				-moz-filter: blur(1.5px);
+				-webkit-filter: blur(1.5px);
+				-o-filter: blur(1.5px);
+
+				filter: grayscale(80%);
+				-moz-filter: grayscale(80%);
+				-webkit-filter: grayscale(80%);
+				-o-filter: grayscale(80%);
+
+				transform: scale(1);
+				-moz-transform: scale(1);
+				-webkit-transform: scale(1);
+				-o-transform: scale(1);
+				-ms-transform: scale(1);
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				border-radius: 7px;
+			}
+
+			.centered { 
+				@include centered(white, 100px, 50%);
+
+				.play-landing:hover {
+					transition: 0.5s ease-in-out;
+					transform: scale(1.1);
+				}
+			}
+
+		}
+	}
+}
+
+.romance {
+	padding: 10px 0px;
+	height: 300px;
+
+	.romance-carousel {
+		height: 80%;
+
+		@include carrousel-categories();
+	}
+}
+
+.animados {
+	padding: 10px 0px;
+	height: 300px;
+
+	.animados-carousel {
+		height: 80%;
+
+		@include carrousel-categories();
+	}
+}
+
+.alquilar {
+	background: #00c853;
+	&:hover {
+		background: #00e676;
+	}
+}

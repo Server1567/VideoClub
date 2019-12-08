@@ -1,0 +1,23 @@
+// Compile run: sass -s compressed scss/alquiler.scss css/alquiler.css
+// Colores e Importaciones
+
+@import 'mixins';
+
+$blue-sky: #2699FB;
+
+body {
+	min-height: 100vh;
+	min-width: 100vh;
+}
+
+nav { @include nav(); }
+
+.imagen {
+	width: 175px;
+}
+
+#alquilar {
+	width: 100% !important;
+	border-radius: 50px;
+	background: $blue-sky;
+}

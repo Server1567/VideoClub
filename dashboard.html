@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- META TAGS -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Dashboard - VideoClub</title>
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/dashboard.css">
+
+	<!-- Importaciones -->
+
+	<link rel="shortcut icon" href="https://images.vexels.com/media/users/3/141504/isolated/preview/745dfb89917b0705717f4889ec2802dd-icono-de-ronda-mundial-by-vexels.png">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:600&display=swap" rel="stylesheet">
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	<link rel="stylesheet" href="res/fontawesome/css/all.css">
+</head>
+<body>
+	
+<header>
+	 <nav style="background-color: #2699FB;">
+		<div class="nav-wrapper">
+			<a href="/VideoClub/dashboard.html" class="brand-logo">VideoClub</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="/VideoClub/alquilados.html">Alquilados</a></li>
+				<li style="cursor: pointer;">
+					<a href="/VideoClub/">
+						<i class="material-icons right">account_circle</i>
+					Usuario</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="#">Alquilados</a></li>
+		<li><a href="/VideoClub/"><i class="material-icons right">account_circle</i>Cuenta</a></li>
+	</ul>
+</header>
+
+<main>
+
+<div class="row"> <!-- Título de la Categoría -->
+	<h5 class="col s12 m4 offset-m4 l4 offset-l4" style="color: #304A85; text-align: center; padding: 20px 0px;">NUEVOS DE VIDEOCLUB
+	</h5>
+</div>
+
+<div class="row"> <!-- Presentación de TRENDING -->
+	<div class="col s10 offset-s1 news">
+
+		  <!-- Detalles de cada película en Modal -->
+		<div id="modal" class="modal" style="border-radius: 7px; width: 75%; height: 100%; background-color: #134d7e;">
+			<div class="modal-content" style="padding: 0; width: 100%; height: 87%; background-size: cover;">
+				<img src="#" alt="#" height="380px" width="100%" id="imageModal" />
+			</div>
+			<div class="modal-footer" style="background-color: #134d7e;">
+				<button class="modal-close waves-effect waves-light btn alquilar" onclick="redirectAlquiler()">ALQUILAR</button>
+			</div>
+		</div>
+		<!-- Detalles de cada película en Modal -->
+
+		<div class="news-carousel">
+			<div class="image image1">
+				<img src="res/news/cover1.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-landing1"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image image2">
+				<img src="res/news/cover2.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-landing2"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image image3">
+				<img src="res/news/cover3.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-landing3"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image image4">
+				<img src="res/news/cover4.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-landing4"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image image5">
+				<img src="res/news/cover5.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-landing5"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row"> <!-- Título de la Categoría -->
+	<h5 class="col s12 m4 l4" style="color: #304A85; text-align: center; padding: 20px 0px;">ROMANCE</h5>
+</div>
+
+<div class="row"> <!-- Categoría ROMANCE -->
+	<div class="col s10 offset-s1 romance">
+		<div class="romance-carousel">
+			<div class="image romance1">
+				<img src="res/romance/cover1.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-romance1"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image romance2">
+				<img src="res/romance/cover2.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-romance2"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image romance3">
+				<img src="res/romance/cover3.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-romance3"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image romance4">
+				<img src="res/romance/cover4.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-romance4"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image romance5">
+				<img src="res/romance/cover5.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-romance5"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image romance6">
+				<img src="res/romance/cover6.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-romance6"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row"> <!-- Título de la Categoría -->
+	<h5 class="col s12 m4 l4" style="color: #304A85; text-align: center; padding: 20px 0px;">ANIMADOS</h5>
+</div>
+
+<div class="row"> <!-- Categoría ANIMADOS -->
+	<div class="col s10 offset-s1 animados">
+		<div class="animados-carousel">
+			<div class="image animados1">
+				<img src="res/animados/cover1.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-animados1"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image animados2">
+				<img src="res/animados/cover2.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-animados2"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image animados3">
+				<img src="res/animados/cover3.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-animados3"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image animados4">
+				<img src="res/animados/cover4.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-animados4"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image animados5">
+				<img src="res/animados/cover5.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-animados5"></i>
+					</a>
+				</div>
+			</div>
+			<div class="image animados6">
+				<img src="res/animados/cover6.jpg" alt="News" class="responsive-img" />
+				<div class="centered">
+					<a href="#modal" class="modal-trigger">
+						<i class="far fa-play-circle play-landing" id="play-animados6"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</main>
+
+<footer class="page-footer" style="background-color: #276eab;">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">VideoClub</h5>
+				<p class="grey-text text-lighten-4">Nuestra mayor plataforma para que puedas alquilar esas películas que tanto deseaste ver.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text">Redes Sociales</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
+					<li><a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.instagram.com/">Instagram</a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.youtube.com/">YouTube</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright" style="background-color: rgba(51,51,51,0.2);">
+		<div class="container">
+			© 2019 VideoClub. Todos los derechos reservados.
+			<a class="grey-text text-lighten-4 right" href="#!">Términos y Privacidad</a>
+		</div>
+	</div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/dashboard.js"></script>
+<!-- Librería Slick utilizada para facilitar el manejo de carruseles -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+	function redirectAlquiler() {
+		window.location.href = "/VideoClub/alquiler.html";
+	}
+</script>
+</body>
+</html>

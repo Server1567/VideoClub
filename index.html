@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- META TAGS -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>VideoClub - Home</title>
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!-- Importaciones -->
+
+	<link rel="shortcut icon" href="https://images.vexels.com/media/users/3/141504/isolated/preview/745dfb89917b0705717f4889ec2802dd-icono-de-ronda-mundial-by-vexels.png">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="res/fontawesome/css/all.css">
+
+</head>	
+
+<body>
+
+<header>
+	 <nav style="background-color: #2699FB;">
+		<div class="nav-wrapper">
+			<a href="/VideoClub/" class="brand-logo">VideoClub</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="/VideoClub/login.html">INICIAR SESIÓN</a></li>
+				<button class="btn-register" onclick="redirect_register()">REGISTRARSE</button>
+			</ul>
+		</div>
+	</nav>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="/VideoClub/login.html">INICIAR SESIÓN</a></li>
+		<li><a href="/VideoClub/register.html">REGISTRARSE</a></li>
+	</ul>
+</header>
+
+<div id="container">
+	<img id="play-bg" src="res/landing1.jpg" alt="Play on VideoClub" width="100%" height="100%" />
+	<img id="play-bg2" src="res/landing2.jpg" alt="Play on VideoClub" width="100%" height="100%" />
+	<img id="play-bg3" src="res/landing3.jpg" alt="Play on VideoClub" width="100%" height="100%" />
+	<div class="centered">
+		<a href="/VideoClub/login.html">
+			<i class="far fa-play-circle play-landing" id="play-landing"></i>
+		</a>
+	</div>
+	<div class="downed">
+		<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+		<a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+		<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+		<a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+	</div>
+</div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/landing.js"></script>
+<script>
+	
+	function redirect_register() {
+		window.location.href = "/VideoClub/register.html";
+	}
+	$(document).ready(function(){
+		$('.sidenav').sidenav();
+	    $('.modal').modal({
+	    	preventScrolling: true,
+	    	dismissible: true
+	    });
+	});
+
+</script>
+</body>
+	
+</html>

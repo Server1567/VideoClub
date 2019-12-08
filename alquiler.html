@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- META TAGS -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Alquiler - VideoClub</title>
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/alquiler.css">
+
+	<!-- Importaciones -->
+
+	<link rel="shortcut icon" href="https://images.vexels.com/media/users/3/141504/isolated/preview/745dfb89917b0705717f4889ec2802dd-icono-de-ronda-mundial-by-vexels.png">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dosis:600&display=swap" rel="stylesheet">
+</head>
+<body>
+	
+<header>
+	 <nav style="background-color: #2699FB;">
+		<div class="nav-wrapper">
+			<a href="/VideoClub/dashboard.html" class="brand-logo">VideoClub</a>
+			<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="/VideoClub/alquilados.html">Alquilados</a></li>
+				<li style="cursor: pointer;">
+					<a href="/VideoClub/">
+						<i class="material-icons right">account_circle</i>
+					Usuario</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="#">Alquilados</a></li>
+		<li><a href="/VideoClub/"><i class="material-icons right">account_circle</i>Cuenta</a></li>
+	</ul>
+</header>
+
+<main style="padding: 50px 0px;">
+	
+<div class="container">
+	<div class="row">
+		<div class="col s12 m4 l3" style="padding-right: 25px;">
+			<div class="imagen">
+				<img src="res/news/cover1.jpg" alt="50 Shades Freed" class="responsive-img" width="100%" height="100%" id="imagen" />
+			</div>
+			<h6>No. de registro:</h6>
+			<span style="color: #276eab; cursor: pointer;"><strong><em id="registro">1f6ew1f56wef6ew1f65ew</em></strong></span>
+			<h5 style="color: #0AA505;" id="precio">€6.99</h5>
+		</div>
+		<div class="col s12 m8 l9">
+			<center><h3 style="margin-top: 0; color: #304A85;" id="titulo">FIFTY SHADES FREED</h3></center>
+			<article> <!-- Descripción de la película -->			
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse omnis magni unde dolorum culpa, mollitia. Qui nisi perferendis sed doloremque ea tempora expedita autem quibusdam facere mollitia fugit eius corrupti, vel, dolorem optio dolores corporis totam explicabo reiciendis consequuntur soluta, deleniti. Recusandae optio repudiandae, ipsam impedit architecto officia doloremque esse.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore rem quidem aliquid dolores laborum, eos autem in sit. Libero, debitis eum provident eius numquam.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam omnis obcaecati exercitationem!
+				</p>
+			</article>
+			<div class="row"> <!-- Fechas -->
+				<div class="col s12 m6">
+					<p style="color: #304A85; font-weight: bold; text-align: center;">Fecha de alquiler:</p>
+					<p style="color: #304A85; font-weight: bold; text-align: center;" id="alquiler">15/12/2020</p>
+				</div>
+				<div class="col s12 m6">
+					<p style="color: #304A85; font-weight: bold; text-align: center;">Fecha de devolución:</p>
+					<p style="color: #304A85; font-weight: bold; text-align: center;" id="devolucion">20/12/2020</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m4 offset-m4">
+					<button class="btn-large waves-effect waves-dark" id="alquilar" onclick="redirectAlquilados()">Alquilar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</main>
+
+<footer class="page-footer" style="background-color: #276eab;">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text">VideoClub</h5>
+				<p class="grey-text text-lighten-4">Nuestra mayor plataforma para que puedas alquilar esas películas que tanto deseaste ver.</p>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text">Redes Sociales</h5>
+				<ul>
+					<li><a class="grey-text text-lighten-3" href="https://www.facebook.com/">Facebook</a></li>
+					<li><a class="grey-text text-lighten-3" href="https://twitter.com/">Twitter</a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.instagram.com/">Instagram</a></li>
+					<li><a class="grey-text text-lighten-3" href="https://www.youtube.com/">YouTube</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright" style="background-color: rgba(51,51,51,0.2);">
+		<div class="container">
+			© 2019 VideoClub. Todos los derechos reservados.
+			<a class="grey-text text-lighten-4 right" href="#!">Términos y Privacidad</a>
+		</div>
+	</div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/materialize.min.js"></script>
+<script>
+
+	function redirectAlquilados() {
+		window.location.href = "/VideoClub/alquilados.html";
+	}
+
+	$(document).ready(function(){
+	    $('.sidenav').sidenav();
+	    $('.modal').modal({
+	    	preventScrolling: true,
+	    	dismissible: true
+	    });
+	});
+</script>
+</body>
+</html>
