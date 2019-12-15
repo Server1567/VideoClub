@@ -8,6 +8,8 @@ $(document).ready(function(){
     	dismissible: true
     });
 
+    $(".slick-arrow").remove();
+
     // Inicializacion de carruseles usando la Librería Slick
 	$('.news-carousel').slick({
 		dots: true,
@@ -32,7 +34,14 @@ $(document).ready(function(){
 			breakpoint: 600,
 			settings: {
 				slidesToShow: 2,
-				dots: true
+				dots: true,
+			}
+
+		}, {
+			breakpoint: 500,
+			settings:{
+				slidesToShow: 1,
+				dots: true,
 			}
 
 		}, {
@@ -65,7 +74,16 @@ $(document).ready(function(){
 			breakpoint: 600,
 			settings: {
 				slidesToShow: 2,
-				dots: true
+				dots: true,
+				arrows: true
+			}
+
+		}, {
+			breakpoint: 500,
+			settings:{
+				slidesToShow: 1,
+				dots: true,
+				arrows: false
 			}
 
 		}, {
@@ -98,7 +116,16 @@ $(document).ready(function(){
 			breakpoint: 600,
 			settings: {
 				slidesToShow: 2,
-				dots: true
+				dots: true,
+				arrows: true
+			}
+
+		}, {
+			breakpoint: 500,
+			settings:{
+				slidesToShow: 1,
+				dots: true,
+				arrows: false
 			}
 
 		}, {

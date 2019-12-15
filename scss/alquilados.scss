@@ -7,7 +7,8 @@ $blue-sky: #2699FB;
 
 body {
 	min-height: 100vh;
-	min-width: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 nav { @include nav(); }
@@ -20,10 +21,29 @@ nav { @include nav(); }
 	border-radius: 50px;
 	box-shadow: 3px 1px 20px 0px;
 	margin: 50px 0px;
+}
 
-	.details-in {
-		width: 70%;
-		height: 100%;
-		background: red;
+// Media Queries
+
+@media only screen and (max-width: 992px) {
+
+	.details {
+		height: auto;
+	}
+
+	.details .row .l3 {
+		height: 400px !important;
+	}
+
+	img {
+		border-radius: 45px 45px 0px 0px !important;
+	}
+
+	.details .row .l9 .row .l4:last-child {
+		align-items: center;
+	}
+
+	.details .row .l9 .row {
+		padding: 60px;
 	}
 }
